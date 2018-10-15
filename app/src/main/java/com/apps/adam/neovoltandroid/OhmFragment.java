@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -18,6 +19,7 @@ public class OhmFragment extends Fragment {
     @BindView(R.id.secondInput) EditText secondInput;
     @BindView(R.id.resultsDisplay) TextView result;
     @BindView(R.id.resultsLabel) TextView resultLabel;
+    @BindView(R.id.calcButton) Button calcButton;
 
 
     //Class constructor

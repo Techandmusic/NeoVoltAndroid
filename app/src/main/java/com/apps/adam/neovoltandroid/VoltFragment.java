@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -14,10 +15,16 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class VoltFragment extends Fragment {
-   @BindView(R.id.firstInput) EditText firstInput;
-   @BindView(R.id.secondInput) EditText secondInput;
-   @BindView(R.id.resultsDisplay) TextView result;
-   @BindView(R.id.resultsLabel) TextView resultLabel;
+    @BindView(R.id.firstInput)
+    EditText firstInput;
+    @BindView(R.id.secondInput)
+    EditText secondInput;
+    @BindView(R.id.resultsDisplay)
+    TextView result;
+    @BindView(R.id.resultsLabel)
+    TextView resultLabel;
+    @BindView(R.id.calcButton)
+    Button calcButton;
 
 
     //Class constructor
@@ -34,6 +41,16 @@ public class VoltFragment extends Fragment {
         firstInput.setHint(R.string.current);
         secondInput.setHint(R.string.resistance);
         resultLabel.setText(R.string.voltage);
+        calcButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Double firstValue = Double.parseDouble(firstInput.getText().toString());
+                Double secondValue = Double.parseDouble(secondInput.getText().toString());
+                Double solution = firstValue * secondValue;
+                result.setText(solution.toString());
+            }
+        });
         return view;
     }
+
 }
