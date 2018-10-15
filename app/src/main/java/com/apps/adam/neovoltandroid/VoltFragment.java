@@ -1,6 +1,5 @@
 package com.apps.adam.neovoltandroid;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -15,11 +14,8 @@ public class VoltFragment extends Fragment {
 
 
     //Class constructor
-    public VoltFragment() {}
-
-
-
-
+    public VoltFragment() {
+    }
 
 
     @Nullable
