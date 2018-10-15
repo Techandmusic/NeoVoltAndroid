@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Neo Volt Android</string>
+    <string name="button_text">Calculate</string>
+    <!-- Values to solve for in tabs -->
+    <string name="volts">Voltage</string>
+    <string name="ohms">Resistance</string>
+    <string name="amperage">Current</string>
+    <!-- Values to display in result labels and inputs -->
+    <string name="voltage">Volts</string>
+    <string name="current">Amps</string>
+    <string name="resistance">Ohms</string>
+    <!-- Page titles -->
+    <string name="volt_title">Solve for Voltage</string>
+    <string name="ohm_title">Solve for Resistance</string>
+    <string name="amp_title">Solve for Current</string>
+
+
+</resources>

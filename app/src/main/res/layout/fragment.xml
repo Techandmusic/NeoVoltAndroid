@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/firstInput"
+        style="@style/InputStyle" />
+
+    <EditText
+        android:id="@+id/secondInput"
+        style="@style/InputStyle"
+        android:layout_below="@+id/firstInput"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/resultRow"
+        android:layout_below="@+id/secondInput"
+        android:layout_marginTop="@dimen/medium_spacing">
+
+        <TextView
+            android:id="@+id/resultsDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/medium_spacing" />
+
+        <TextView
+            android:id="@+id/resultsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/medium_spacing" />
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/calcButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/medium_spacing"
+        android:text="@string/button_text" />
+
+
+
+</RelativeLayout>
