@@ -10,7 +10,14 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class OhmFragment extends Fragment {
+    @BindView(R.id.firstInput) EditText firstInput;
+    @BindView(R.id.secondInput) EditText secondInput;
+    @BindView(R.id.resultsDisplay) TextView result;
+    @BindView(R.id.resultsLabel) TextView resultLabel;
 
 
     //Class constructor
@@ -22,11 +29,7 @@ public class OhmFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment, container, false);
-        //Initialize EditText and TextView variables
-        EditText firstInput = view.findViewById(R.id.firstInput);
-        EditText secondInput = view.findViewById(R.id.secondInput);
-        TextView result = view.findViewById(R.id.resultsDisplay);
-        TextView resultLabel = view.findViewById(R.id.resultsLabel);
+        ButterKnife.bind(this, view);
         //Set hints and labels
         firstInput.setHint(R.string.voltage);
         secondInput.setHint(R.string.current);
