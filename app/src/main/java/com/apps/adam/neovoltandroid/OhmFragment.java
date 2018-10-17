@@ -15,11 +15,16 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class OhmFragment extends Fragment {
-    @BindView(R.id.firstInput) EditText firstInput;
-    @BindView(R.id.secondInput) EditText secondInput;
-    @BindView(R.id.resultsDisplay) TextView result;
-    @BindView(R.id.resultsLabel) TextView resultLabel;
-    @BindView(R.id.calcButton) Button calcButton;
+    @BindView(R.id.firstInput)
+    EditText firstInput;
+    @BindView(R.id.secondInput)
+    EditText secondInput;
+    @BindView(R.id.resultsDisplay)
+    TextView result;
+    @BindView(R.id.resultsLabel)
+    TextView resultLabel;
+    @BindView(R.id.calcButton)
+    Button calcButton;
 
 
     //Class constructor
@@ -36,6 +41,15 @@ public class OhmFragment extends Fragment {
         firstInput.setHint(R.string.voltage);
         secondInput.setHint(R.string.current);
         resultLabel.setText(R.string.resistance);
+        calcButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Double firstValue = Double.parseDouble(firstInput.getText().toString());
+                Double secondValue = Double.parseDouble(secondInput.getText().toString());
+                Double solution = firstValue / secondValue;
+                result.setText(solution.toString());
+            }
+        });
         return view;
     }
 }
