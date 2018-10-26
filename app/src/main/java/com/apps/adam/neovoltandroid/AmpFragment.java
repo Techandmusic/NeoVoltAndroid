@@ -3,6 +3,7 @@ package com.apps.adam.neovoltandroid;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.annotation.StringRes;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -47,9 +49,16 @@ public class AmpFragment extends Fragment {
                 Double firstValue = Double.parseDouble(firstInput.getText().toString());
                 Double secondValue = Double.parseDouble(secondInput.getText().toString());
                 Double solution = firstValue / secondValue;
-                result.setText(solution.toString());
+                if (solution.isInfinite()) {
+                    Toast.makeText(getContext(), R.string.divide_by_zero, Toast.LENGTH_SHORT).show();
+                } else {
+                    result.setText(solution.toString());
+                }
+
+
             }
         });
         return view;
     }
+
 }

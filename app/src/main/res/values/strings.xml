@@ -13,6 +13,8 @@
     <string name="volt_title">Solve for Voltage</string>
     <string name="ohm_title">Solve for Resistance</string>
     <string name="amp_title">Solve for Current</string>
+    <!--Error strings -->
+    <string name="divide_by_zero">Cannot divide by zero</string>
 
 
 </resources>
