@@ -27,7 +27,7 @@ public class AmpFragment extends Fragment {
     TextView resultLabel;
     @BindView(R.id.calcButton)
     Button calcButton;
-//TODO Add handler for divide by zero exception, possibly with toast message
+
 
     //Class constructor
     public AmpFragment() {
